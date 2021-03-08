@@ -1,0 +1,66 @@
+@import "fonts";
+@import "normalize";
+
+html,
+body {
+	height: 100%;
+	background: rgba(255, 255, 255, 1);
+	color: rgba(34, 34, 34, 1);
+}
+a, button, a *, button * {
+	cursor: pointer;
+}
+
+.wrapper {
+	min-height: 100%;
+    max-width: 1440px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+.header {
+    padding: 15px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        flex: 0 0 150px;
+        height: auto;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__menu {
+        flex: 0 0 auto;
+    }
+}
+
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }

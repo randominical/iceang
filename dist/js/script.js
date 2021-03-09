@@ -29,7 +29,7 @@ var sliderCall = {
             arrows: true,
             centerMode: true,
             infinite: true,
-            autoplay: true,
+            //autoplay: true,
             slidesToShow: 4,
             slidesToScroll: 1,
             draggable: true,

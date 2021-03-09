@@ -3,6 +3,11 @@
     margin: 0;
     padding: 0;
     position: relative;
+    &:hover {
+      .slick-arrow {
+        opacity: .5;
+      }
+    }
     .slick-arrow {
         position: absolute;
         top: 50%;
@@ -13,7 +18,7 @@
         padding: 0;
         font-size: 0;
         z-index: 1;
-        opacity: .5;
+        opacity: 0;
         transition: opacity .3s linear;
         overflow: hidden;
         &.slick-prev {
@@ -23,12 +28,12 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 13px;
-                height: 13px;
+                width: 23px;
+                height: 23px;
                 margin-left: -4px;
                 margin-top: -8px;
-                border-top: solid 4px teal;
-                border-left: solid 4px teal; 
+                border-top: solid 4px rgb(203, 219, 219);
+                border-left: solid 4px rgb(203, 219, 219); 
                 transform: rotate(-45deg);
             }
         }
@@ -39,12 +44,12 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 13px;
-                height: 13px;
+                width: 23px;
+                height: 23px;
                 margin-left: -9px;
                 margin-top: -8px;
-                border-right: solid 4px rgb(0, 128, 128);
-                border-bottom: solid 4px teal;
+                border-right: solid 4px rgb(203, 219, 219);
+                border-bottom: solid 4px rgb(203, 219, 219);
                 transform: rotate(-45deg);
             }
         }
@@ -57,14 +62,13 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        padding: 0 26px;
+        padding: 0;
         li {
             min-width: 0;
-            flex: 0 0 300px;
-            margin: 0 20px;
+            flex: 0 0 330px;
             a {
                 height: 100%;
-                width: 300px;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -72,7 +76,8 @@
             }
             img {
                 height: 100%;
-                width: auto;
+                display: block;
+                margin: auto;
             }
         }
     }
@@ -105,7 +110,6 @@
     }
 }
 
-/* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
   left: 0;
@@ -151,7 +155,7 @@
   vertical-align: middle;
   margin: 0 auto;
   text-align: left;
-  z-index: 1045; }
+  z-index: 1045;}
 
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
@@ -173,10 +177,7 @@
 .mfp-auto-cursor .mfp-content {
   cursor: auto; }
 
-.mfp-close,
-.mfp-arrow,
-.mfp-preloader,
-.mfp-counter {
+.mfp-preloader {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none; }
@@ -256,13 +257,7 @@ button::-moz-focus-inner {
   width: 100%; }
 
 .mfp-counter {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #CCC;
-  font-size: 12px;
-  line-height: 18px;
-  white-space: nowrap; }
+  display: none; }
 
 .mfp-arrow {
   position: absolute;
@@ -351,11 +346,21 @@ img.mfp-img {
   cursor: auto; }
 
 .mfp-title {
-  text-align: left;
-  line-height: 18px;
-  color: #F3F3F3;
-  word-wrap: break-word;
-  padding-right: 36px; }
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: block;
+  background-color: rgba(255, 255, 255, .8);
+  border: 1px solid rgb(145, 145, 145);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  line-height: 150%;
+  transform: translate(0, 100%);
+}
 
 .mfp-image-holder .mfp-content {
   max-width: 100%; }
@@ -388,9 +393,6 @@ img.mfp-img {
     box-sizing: border-box; }
     .mfp-img-mobile .mfp-bottom-bar:empty {
       padding: 0; }
-  .mfp-img-mobile .mfp-counter {
-    right: 5px;
-    top: 3px; }
   .mfp-img-mobile .mfp-close {
     top: 0;
     right: 0;

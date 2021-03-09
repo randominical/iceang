@@ -486,6 +486,10 @@ h6 {
   position: relative;
 }
 
+.gallery:hover .slick-arrow {
+  opacity: .5;
+}
+
 .gallery .slick-arrow {
   position: absolute;
   top: 50%;
@@ -496,7 +500,7 @@ h6 {
   padding: 0;
   font-size: 0;
   z-index: 1;
-  opacity: .5;
+  opacity: 0;
   -webkit-transition: opacity .3s linear;
   -o-transition: opacity .3s linear;
   transition: opacity .3s linear;
@@ -512,12 +516,12 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 13px;
-  height: 13px;
+  width: 23px;
+  height: 23px;
   margin-left: -4px;
   margin-top: -8px;
-  border-top: solid 4px teal;
-  border-left: solid 4px teal;
+  border-top: solid 4px #cbdbdb;
+  border-left: solid 4px #cbdbdb;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -532,12 +536,12 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 13px;
-  height: 13px;
+  width: 23px;
+  height: 23px;
   margin-left: -9px;
   margin-top: -8px;
-  border-right: solid 4px teal;
-  border-bottom: solid 4px teal;
+  border-right: solid 4px #cbdbdb;
+  border-bottom: solid 4px #cbdbdb;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -558,20 +562,19 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  padding: 0 26px;
+  padding: 0;
 }
 
 .gallery .gallery-slider li {
   min-width: 0;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 300px;
-          flex: 0 0 300px;
-  margin: 0 20px;
+      -ms-flex: 0 0 330px;
+          flex: 0 0 330px;
 }
 
 .gallery .gallery-slider li a {
   height: 100%;
-  width: 300px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,7 +589,8 @@ h6 {
 
 .gallery .gallery-slider li img {
   height: 100%;
-  width: auto;
+  display: block;
+  margin: auto;
 }
 
 .mfp-gallery .mfp-container {
@@ -619,8 +623,6 @@ h6 {
 .mfp-gallery .mfp-arrow {
   display: none;
 }
-
-/* Magnific Popup CSS */
 
 .mfp-bg {
   top: 0;
@@ -702,10 +704,7 @@ h6 {
   cursor: auto;
 }
 
-.mfp-close,
-.mfp-arrow,
-.mfp-preloader,
-.mfp-counter {
+.mfp-preloader {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -807,13 +806,7 @@ button::-moz-focus-inner {
 }
 
 .mfp-counter {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #CCC;
-  font-size: 12px;
-  line-height: 18px;
-  white-space: nowrap;
+  display: none;
 }
 
 .mfp-arrow {
@@ -930,11 +923,22 @@ img.mfp-img {
 }
 
 .mfp-title {
-  text-align: left;
-  line-height: 18px;
-  color: #F3F3F3;
-  word-wrap: break-word;
-  padding-right: 36px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #919191;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  line-height: 150%;
+  -webkit-transform: translate(0, 100%);
+      -ms-transform: translate(0, 100%);
+          transform: translate(0, 100%);
 }
 
 .mfp-image-holder .mfp-content {
@@ -1110,6 +1114,7 @@ button * {
 
 .page {
   padding: 150px 0 200px 0;
+  position: relative;
 }
 
 @media all and (max-width: 900px) {
@@ -1174,11 +1179,6 @@ button * {
 
   .mfp-img-mobile .mfp-bottom-bar:empty {
     padding: 0;
-  }
-
-  .mfp-img-mobile .mfp-counter {
-    right: 5px;
-    top: 3px;
   }
 
   .mfp-img-mobile .mfp-close {

@@ -28,21 +28,21 @@ var sliderCall = {
             dots: false,
             arrows: true,
             infinite: true,
+            autoplay: true,
             slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToScroll: 1,
+            draggable: true,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
                     }
                 },
                 {
                     breakpoint: 500,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1,
                         centerMode: true,
                         centerPadding: '15px'
                     }

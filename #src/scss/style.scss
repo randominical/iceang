@@ -22,7 +22,12 @@ a, button, a *, button * {
 }
 
 .container {
+    max-width: 1440px;
     padding: 0 20px 0 200px;
+    margin: 0 auto;
+    &_f {
+        padding: 0 20px;
+    }
 }
 
 .header {
@@ -57,20 +62,52 @@ a, button, a *, button * {
     top: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
     z-index: 10;
 }
 
-.iconbar {
-    &__icon {
-        margin: 15px 0 15px 0;
-        padding: 5px;
+.menu {
+    margin: 0 0 30px 0;
+    padding: 0;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+    &__li {
+        margin: 5px 0 5px 0;
     }
     &__link {
         font-size: 14px;
         color: grey;
+        padding: 5px;
+        margin: 1px 0;
+        &:visited {
+            color: grey;
+        }
+        &:hover, &:active {
+            color: purple;
+        }
+    }
+}
+
+.iconbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    &__icon {
+        margin: 3px 0 3px 0;
+    }
+    &__link {
+        font-size: 14px;
+        color: grey;
+        padding: 5px;
+        margin: 1px 0;
         &:visited {
             color: grey;
         }

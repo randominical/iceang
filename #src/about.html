@@ -9,59 +9,9 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="img/gif/logo.gif" alt="iceang">
-                </a>
-            </div>
-        </header>
+        @@include('_header.html')
         <main class="page">
-            <aside class="sidebar">
-                <div class="empty"></div>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__li">
-                            <a href="about.html" class="menu__link">about</a>
-                        </li>
-                        <li class="menu__li">
-                            <a href="#" class="menu__link">pics</a>
-                        </li>
-                        <li class="menu__li">
-                            <a href="#" class="menu__link">gif</a>
-                        </li>
-                        <li class="menu__li">
-                            <a href="#" class="menu__link">comix</a>
-                        </li>
-                        <li class="menu__li">
-                            <a href="#" class="menu__link">zin</a>
-                        </li>
-                        <li class="menu__li">
-                            <a href="#" class="menu__link">shop</a>
-                        </li>
-                        <li class="menu__li">
-                            <a href="#" class="menu__link">order</a>
-                        </li>
-                    </ul>
-                </nav>
-                <ul class="iconbar">
-                    <li class="iconbar__icon">
-                        <a class="iconbar__link" href="https://www.instagram.com/iceang/" target="_blank">instagram</a>
-                    </li>
-                    <li class="iconbar__icon">
-                        <a class="iconbar__link" href="https://vk.com/iceang" target="_blank">vk</a>
-                    </li>
-                    <li class="iconbar__icon">
-                        <a class="iconbar__link" href="https://dribbble.com/iceang" target="_blank">dribbble</a>
-                    </li>
-                    <li class="iconbar__icon">
-                        <a class="iconbar__link" href="https://www.behance.net/iceang" target="_blank">behance</a>
-                    </li>
-                    <li class="iconbar__icon">
-                        <a class="iconbar__link" href="https://www.redbubble.com/people/iceang/shop?asc=u" target="_blank">redbubble</a>
-                    </li>
-                </ul>
-            </aside>
+            @@include('_sidebar.html')
             <section class="artist">
                 <div class="container">
                     <h1>about</h1>
@@ -69,11 +19,7 @@
             </section>
         </main>
     </div>
-    <footer class="footer">
-        <div class="container container_f">
-            footer
-        </div>
-    </footer>
+    @@include('_footer.html')
     <script src="js/script.js"></script>
 </body>
 </html>

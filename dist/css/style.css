@@ -556,8 +556,8 @@ h6 {
   height: 23px;
   margin-left: -4px;
   margin-top: -8px;
-  border-top: solid 4px #cbdbdb;
-  border-left: solid 4px #cbdbdb;
+  border-top: solid 4px #bbdada;
+  border-left: solid 4px #bbdada;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -576,8 +576,8 @@ h6 {
   height: 23px;
   margin-left: -9px;
   margin-top: -8px;
-  border-right: solid 4px #cbdbdb;
-  border-bottom: solid 4px #cbdbdb;
+  border-right: solid 4px #bbdada;
+  border-bottom: solid 4px #bbdada;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -1027,6 +1027,9 @@ button,
 a *,
 button * {
   cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 .wrapper {
@@ -1034,10 +1037,11 @@ button * {
   max-width: 1440px;
   overflow: hidden;
   margin: 0 auto;
+  position: relative;
 }
 
 .container {
-  padding: 0 20px;
+  padding: 0 20px 0 200px;
 }
 
 .header {
@@ -1056,7 +1060,7 @@ button * {
           align-items: center;
 }
 
-.header__logo {
+.logo {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 150px;
           flex: 0 0 150px;
@@ -1064,20 +1068,66 @@ button * {
   overflow: hidden;
 }
 
-.header__logo img {
+.logo img {
   width: 100%;
   height: auto;
 }
 
-.header__menu {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-
 .page {
   padding: 150px 0 200px 0;
-  position: relative;
+}
+
+.sidebar {
+  background: white;
+  height: 100%;
+  padding: 30px 25px 30px 55px;
+  position: absolute;
+  left: -5px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+          box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+  z-index: 10;
+}
+
+.iconbar__icon {
+  margin: 15px 0 15px 0;
+  padding: 5px;
+}
+
+.iconbar__link {
+  font-size: 14px;
+  color: grey;
+}
+
+.iconbar__link:visited {
+  color: grey;
+}
+
+.iconbar__link:hover,
+.iconbar__link:active {
+  color: purple;
+}
+
+.gallery {
+  overflow: hidden;
+}
+
+.footer {
+  background: white;
+  border-top: 1px solid rgba(151, 131, 128, 0.2);
 }
 
 @media all and (max-width: 900px) {

@@ -10,6 +10,7 @@ body {
 }
 a, button, a *, button * {
 	cursor: pointer;
+    transition: all .3s linear;
 }
 
 .wrapper {
@@ -17,10 +18,11 @@ a, button, a *, button * {
     max-width: 1440px;
     overflow: hidden;
     margin: 0 auto;
+    position: relative;
 }
 
 .container {
-    padding: 0 20px;
+    padding: 0 20px 0 200px;
 }
 
 .header {
@@ -30,25 +32,64 @@ a, button, a *, button * {
         justify-content: space-between;
         align-items: center;
     }
-    &__logo {
-        flex: 0 0 150px;
+}
+
+.logo {
+    flex: 0 0 150px;
+    height: auto;
+    overflow: hidden;
+    img {
+        width: 100%;
         height: auto;
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
-    &__menu {
-        flex: 0 0 auto;
     }
 }
 
 .page {
     padding: 150px 0 200px 0;
-    position: relative;
+}
+
+.sidebar {
+    background: white;
+    height: 100%;
+    padding: 30px 25px 30px 55px;
+    position: absolute;
+    left: -5px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+    z-index: 10;
+}
+
+.iconbar {
+    &__icon {
+        margin: 15px 0 15px 0;
+        padding: 5px;
+    }
+    &__link {
+        font-size: 14px;
+        color: grey;
+        &:visited {
+            color: grey;
+        }
+        &:hover, &:active {
+            color: purple;
+        }
+        //overflow: hidden;
+        img {
+            //width: 100%;
+            //height: auto;
+        }
+    }
 }
 
 .gallery {
+    overflow: hidden;
+}
 
+.footer {
+    background: white;
+    border-top: 1px solid rgba(151, 131, 128, 0.2);;
 }

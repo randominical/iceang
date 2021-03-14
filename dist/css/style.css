@@ -1192,6 +1192,46 @@ button * {
   overflow: hidden;
 }
 
+.parts {
+  padding: 140px 0;
+}
+
+.parts__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.parts__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+  position: relative;
+  padding-top: 50%;
+  overflow: hidden;
+}
+
+.parts__item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.parts__item:nth-child(2n+1) {
+  margin: 0 50px 50px 0;
+}
+
+.parts__item:nth-child(2n) {
+  margin: 0 0 50px 0;
+}
+
 .footer {
   background: white;
   border-top: 1px solid rgba(151, 131, 128, 0.2);

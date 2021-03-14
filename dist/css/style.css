@@ -1046,10 +1046,6 @@ button * {
   margin: 0 auto;
 }
 
-.container_f {
-  padding: 0 20px;
-}
-
 .header {
   padding: 15px 0;
 }
@@ -1086,10 +1082,21 @@ button * {
 .sidebar {
   background: white;
   height: 100%;
+  width: calc(50vw - 670px);
   padding: 30px 25px 30px 55px;
-  position: absolute;
+  position: fixed;
   left: -5px;
   top: 0;
+  -webkit-box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+          box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+  z-index: 10;
+  overflow: auto;
+}
+
+.sidebar__body {
+  height: 100%;
+  width: 90px;
+  margin: 0 0 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1097,11 +1104,9 @@ button * {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
-          box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
-  z-index: 10;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu {
@@ -1190,6 +1195,12 @@ button * {
 .footer {
   background: white;
   border-top: 1px solid rgba(151, 131, 128, 0.2);
+}
+
+@media (max-width: 1600px) {
+  .sidebar {
+    width: 140px;
+  }
 }
 
 @media all and (max-width: 900px) {

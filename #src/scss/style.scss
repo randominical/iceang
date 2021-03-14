@@ -25,9 +25,6 @@ a, button, a *, button * {
     max-width: 1440px;
     padding: 0 20px 0 200px;
     margin: 0 auto;
-    &_f {
-        padding: 0 20px;
-    }
 }
 
 .header {
@@ -56,15 +53,25 @@ a, button, a *, button * {
 .sidebar {
     background: white;
     height: 100%;
+    width: calc(50vw - 670px);
     padding: 30px 25px 30px 55px;
-    position: absolute;
+    position: fixed;
     left: -5px;
     top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
     z-index: 10;
+    overflow: auto;
+    &__body {
+        height: 100%;
+        width: 90px;
+        margin: 0 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    @media (max-width: 1600px) {
+        width: 140px;
+    }
 }
 
 .menu {

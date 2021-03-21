@@ -1015,6 +1015,12 @@ img.mfp-img {
   display: none;
 }
 
+* {
+  font-size: 16px;
+  line-height: 130%;
+  color: black;
+}
+
 html,
 body {
   height: 100%;
@@ -1046,6 +1052,114 @@ button * {
   margin: 0 auto;
 }
 
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box_sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.box__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0 50px 50px 50px;
+}
+
+.box__column_p {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+
+.box__link {
+  width: 100%;
+  padding-top: 100%;
+  margin: 0 0 20% 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.box__link:last-child {
+  margin: 0;
+}
+
+.box__link img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.box__link:hover img {
+  width: 105%;
+  height: 105%;
+}
+
+.box__link:hover .title_chapter {
+  -webkit-transition: opacity .3s linear;
+  -o-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+  opacity: 1;
+  z-index: 2;
+}
+
+.title_main {
+  font-size: 28px;
+  margin: 0 0 50px 0;
+  padding: 0;
+}
+
+.title_chapter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  background: rgba(29, 29, 29, 0.5);
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
 .header {
   padding: 15px 0;
 }
@@ -1054,9 +1168,9 @@ button * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1196,50 +1310,58 @@ button * {
   padding: 140px 0;
 }
 
-.parts__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.parts__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 45%;
-          flex: 0 0 45%;
-  position: relative;
-  padding-top: 50%;
+.portrait {
+  width: 300px;
+  height: auto;
   overflow: hidden;
 }
 
-.parts__item img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.portrait img {
   width: 100%;
   height: auto;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.parts__item:nth-child(2n+1) {
-  margin: 0 50px 50px 0;
-}
-
-.parts__item:nth-child(2n) {
-  margin: 0 0 50px 0;
 }
 
 .footer {
   background: white;
-  border-top: 1px solid rgba(151, 131, 128, 0.2);
+  padding: 30px 0;
+  text-align: right;
+  -webkit-box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+          box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+  z-index: 5;
+}
+
+.copyrights__artist {
+  font-size: 12px !important;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.copyrights__coder {
+  font-size: 12px !important;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.copyrights__year {
+  font-size: 12px !important;
+  margin: 0;
+  padding: 0;
+}
+
+.copyrights__link {
+  font-size: 16px !important;
+  font-weight: bold;
+  color: grey;
+}
+
+.copyrights__link:hover,
+.copyrights__link:active {
+  color: orangered;
 }
 
 @media (max-width: 1600px) {
   .sidebar {
-    width: 140px;
+    width: auto;
   }
 }
 

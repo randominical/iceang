@@ -2,6 +2,12 @@
 @import "normalize";
 @import "slider";
 
+* {
+    font-size: 16px;
+    line-height: 130%;
+    color: black;
+}
+
 html,
 body {
 	height: 100%;
@@ -27,11 +33,86 @@ a, button, a *, button * {
     margin: 0 auto;
 }
 
+.box {
+    display: flex;
+    &_sb {
+        justify-content: space-between;
+    }
+    &__column {
+        flex: 0 0 auto;
+        margin: 0 50px 50px 50px;
+        &_p {
+            flex: 0 0 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0;
+        }
+    }
+    &__link {
+        width: 100%;
+        padding-top: 100%;
+        margin: 0 0 20% 0;
+        position: relative;
+        overflow: hidden;
+        &:last-child {
+            margin: 0;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        &:hover {
+            img {
+                width: 105%;
+                height: 105%;
+            }
+            .title_chapter {
+                transition: opacity .3s linear;
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+    }
+}
+.title {
+    &_main {
+        font-size: 28px;
+        margin: 0 0 50px 0;
+        padding: 0;
+    }
+    &_chapter {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        background: rgba(29, 29, 29, 0.5);
+        color: white;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
 .header {
     padding: 15px 0;
     .container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
     }
 }
@@ -70,7 +151,7 @@ a, button, a *, button * {
         justify-content: space-between;
     }
     @media (max-width: 1600px) {
-        width: 140px;
+        width: auto;
     }
 }
 
@@ -121,11 +202,6 @@ a, button, a *, button * {
         &:hover, &:active {
             color: purple;
         }
-        //overflow: hidden;
-        img {
-            //width: 100%;
-            //height: auto;
-        }
     }
 }
 
@@ -135,33 +211,48 @@ a, button, a *, button * {
 
 .parts {
     padding: 140px 0;
-    &__box {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    &__item {
-        flex: 0 0 45%;
-        position: relative;
-        padding-top: 50%;
-        overflow: hidden;
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: auto;
-            transform: translate(-50%, -50%);
-        }
-        &:nth-child(2n+1) {
-            margin: 0 50px 50px 0;
-        }
-        &:nth-child(2n) {
-            margin: 0 0 50px 0;
-        }
+}
+
+.portrait {
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
     }
 }
 
 .footer {
     background: white;
-    border-top: 1px solid rgba(151, 131, 128, 0.2);;
+    padding: 30px 0;
+    text-align: right;
+    box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+    z-index: 5;
+}
+
+.copyrights {
+    &__artist {
+        font-size: 12px !important;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+    &__coder {
+        font-size: 12px !important;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+    &__year {
+        font-size: 12px !important;
+        margin: 0;
+        padding: 0;
+    }
+    &__link {
+        font-size: 16px !important;
+        font-weight: bold;
+        color: grey;
+        &:hover, &:active {
+            color: orangered;
+        }
+    }
 }

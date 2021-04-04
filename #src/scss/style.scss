@@ -144,21 +144,17 @@ a, button, a *, button * {
     top: 0;
     box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     overflow: auto;
-    &__body {
-        height: 100%;
-        width: 90px;
-        margin: 0 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
     @media (max-width: 1650px) {
         width: auto;
     }
 }
 
 .menu {
+    width: 90px;
     margin: 0 0 30px 0;
     padding: 0;
     &__list {
@@ -169,30 +165,6 @@ a, button, a *, button * {
     }
     &__li {
         margin: 5px 0 5px 0;
-    }
-    &__link {
-        font-size: 14px;
-        color: grey;
-        padding: 5px;
-        margin: 1px 0;
-        &:visited {
-            color: grey;
-        }
-        &:hover, &:active {
-            color: purple;
-        }
-    }
-}
-
-.iconbar {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    &__icon {
-        margin: 3px 0 3px 0;
     }
     &__link {
         font-size: 14px;
@@ -228,6 +200,33 @@ a, button, a *, button * {
     text-align: right;
     box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
     z-index: 5;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.iconbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    &__icon {
+        margin: 3px 0 3px 0;
+    }
+    &__link {
+        font-size: 14px;
+        color: grey;
+        padding: 5px;
+        margin: 1px 0;
+        &:visited {
+            color: grey;
+        }
+        &:hover, &:active {
+            color: purple;
+        }
+    }
 }
 
 .copyrights {
@@ -248,7 +247,6 @@ a, button, a *, button * {
     }
     &__link {
         font-size: 16px !important;
-        font-weight: bold;
         color: grey;
         &:hover, &:active {
             color: orangered;

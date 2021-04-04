@@ -1040,13 +1040,6 @@ button * {
   -webkit-box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
           box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
   z-index: 10;
-  overflow: auto;
-}
-
-.sidebar__body {
-  height: 100%;
-  width: 90px;
-  margin: 0 0 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1054,12 +1047,14 @@ button * {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: auto;
 }
 
 .menu {
+  width: 90px;
   margin: 0 0 30px 0;
   padding: 0;
 }
@@ -1100,44 +1095,6 @@ button * {
   color: purple;
 }
 
-.iconbar {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-}
-
-.iconbar__icon {
-  margin: 3px 0 3px 0;
-}
-
-.iconbar__link {
-  font-size: 14px;
-  color: grey;
-  padding: 5px;
-  margin: 1px 0;
-}
-
-.iconbar__link:visited {
-  color: grey;
-}
-
-.iconbar__link:hover,
-.iconbar__link:active {
-  color: purple;
-}
-
 .parts {
   padding: 140px 0;
 }
@@ -1162,6 +1119,49 @@ button * {
   z-index: 5;
 }
 
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.iconbar {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iconbar__icon {
+  margin: 3px 0 3px 0;
+}
+
+.iconbar__link {
+  font-size: 14px;
+  color: grey;
+  padding: 5px;
+  margin: 1px 0;
+}
+
+.iconbar__link:visited {
+  color: grey;
+}
+
+.iconbar__link:hover,
+.iconbar__link:active {
+  color: purple;
+}
+
 .copyrights__artist {
   font-size: 12px !important;
   margin: 0 0 5px 0;
@@ -1182,7 +1182,6 @@ button * {
 
 .copyrights__link {
   font-size: 16px !important;
-  font-weight: bold;
   color: grey;
 }
 

@@ -29,7 +29,7 @@ a, button, a *, button * {
 
 .container {
     max-width: 1540px;
-    padding: 0 100px 0 270px;
+    padding: 0 100px 0 210px;
     margin: 0 auto;
 }
 
@@ -137,24 +137,25 @@ a, button, a *, button * {
 .sidebar {
     background: white;
     height: 100%;
-    width: calc(50vw - 670px);
+    width: calc(50vw - 770px);
     padding: 30px 25px 30px 55px;
     position: fixed;
     left: -5px;
     top: 0;
-    box-shadow: 3px 2px 24px 0px rgba(151, 131, 128, 0.2);
+    box-shadow: 3px 2px 15px 0px rgba(207, 187, 184, 0.2);
     z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
     overflow: auto;
-    @media (max-width: 1650px) {
+    @media (max-width: 1900px) {
         width: auto;
     }
 }
 
 .menu {
-    width: 90px;
+    width: 60px;
     margin: 0 0 30px 0;
     padding: 0;
     &__list {

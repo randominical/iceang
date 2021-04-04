@@ -1099,6 +1099,10 @@ button * {
   padding: 140px 0;
 }
 
+.artist {
+  padding: 250px 0 50px 0;
+}
+
 .portrait {
   width: 300px;
   height: auto;

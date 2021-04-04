@@ -21,15 +21,15 @@ a, button, a *, button * {
 
 .wrapper {
 	min-height: 100%;
-    max-width: 1440px;
+    max-width: 1540px;
     overflow: hidden;
     margin: 0 auto;
     position: relative;
 }
 
 .container {
-    max-width: 1440px;
-    padding: 0 20px 0 200px;
+    max-width: 1540px;
+    padding: 0 100px 0 270px;
     margin: 0 auto;
 }
 
@@ -109,6 +109,9 @@ a, button, a *, button * {
 }
 
 .header {
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 15px 0;
     .container {
         display: flex;
@@ -128,7 +131,7 @@ a, button, a *, button * {
 }
 
 .page {
-    padding: 150px 0 200px 0;
+    padding: 0 0 200px 0;
 }
 
 .sidebar {
@@ -150,7 +153,7 @@ a, button, a *, button * {
         flex-direction: column;
         justify-content: space-between;
     }
-    @media (max-width: 1600px) {
+    @media (max-width: 1650px) {
         width: auto;
     }
 }
@@ -203,10 +206,6 @@ a, button, a *, button * {
             color: purple;
         }
     }
-}
-
-.gallery {
-    overflow: hidden;
 }
 
 .parts {

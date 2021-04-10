@@ -30,60 +30,13 @@ a, button, a *, button * {
 .container {
     width: 100%;
     max-width: 1540px;
-    padding: 0 100px 0 200px;
+    padding: 0 100px 0 190px;
     margin: 0 auto;
     @media (max-width: 1000px) {
         padding: 0 50px 0 130px;
     }
 }
 
-.box {
-    display: flex;
-    &_sb {
-        justify-content: space-between;
-    }
-    &__column {
-        flex: 0 0 auto;
-        margin: 0 50px 50px 50px;
-        &_p {
-            flex: 0 0 45%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin: 0;
-        }
-    }
-    &__link {
-        width: 100%;
-        padding-top: 100%;
-        margin: 0 0 20% 0;
-        position: relative;
-        overflow: hidden;
-        &:last-child {
-            margin: 0;
-        }
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-        }
-        &:hover {
-            img {
-                width: 105%;
-                height: 105%;
-            }
-            .title_chapter {
-                transition: opacity .3s linear;
-                opacity: 1;
-                z-index: 2;
-            }
-        }
-    }
-}
 .title {
     &_main {
         font-size: 28px;
@@ -188,12 +141,50 @@ a, button, a *, button * {
     }
 }
 
+.row {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.column {
+    flex: 1 0 200px;
+    margin: 0 5% 0 5%;
+}
+
 .parts {
-    padding: 140px 0;
+    padding: 50px 0;
+    &__link {
+        display: block;
+        width: 100%;
+        padding: 100% 0 0 0;
+        margin: 0 30% 30% 0;
+        position: relative;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        &:hover {
+            img {
+                width: 105%;
+                height: 105%;
+            }
+            .title_chapter {
+                transition: opacity .3s linear;
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+    }
 }
 
 .artist {
-
     padding: 250px 0 50px 0;
 }
 

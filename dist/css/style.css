@@ -869,81 +869,8 @@ button * {
 .container {
   width: 100%;
   max-width: 1540px;
-  padding: 0 100px 0 200px;
+  padding: 0 100px 0 190px;
   margin: 0 auto;
-}
-
-.box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.box_sb {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.box__column {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  margin: 0 50px 50px 50px;
-}
-
-.box__column_p {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 45%;
-          flex: 0 0 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0;
-}
-
-.box__link {
-  width: 100%;
-  padding-top: 100%;
-  margin: 0 0 20% 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.box__link:last-child {
-  margin: 0;
-}
-
-.box__link img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.box__link:hover img {
-  width: 105%;
-  height: 105%;
-}
-
-.box__link:hover .title_chapter {
-  -webkit-transition: opacity .3s linear;
-  -o-transition: opacity .3s linear;
-  transition: opacity .3s linear;
-  opacity: 1;
-  z-index: 2;
 }
 
 .title_main {
@@ -1074,8 +1001,61 @@ button * {
   color: purple;
 }
 
+.row {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+  margin: 0 5% 0 5%;
+}
+
 .parts {
-  padding: 140px 0;
+  padding: 50px 0;
+}
+
+.parts__link {
+  display: block;
+  width: 100%;
+  padding: 100% 0 0 0;
+  margin: 0 30% 30% 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.parts__link img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.parts__link:hover img {
+  width: 105%;
+  height: 105%;
+}
+
+.parts__link:hover .title_chapter {
+  -webkit-transition: opacity .3s linear;
+  -o-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+  opacity: 1;
+  z-index: 2;
 }
 
 .artist {

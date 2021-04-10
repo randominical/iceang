@@ -1,5 +1,6 @@
 .gallery {
     height: 100vh;
+    //width: 100%;
     min-height: 920px;
     padding: 250px 0 50px 0;
     display: flex;
@@ -19,117 +20,123 @@
       margin: 0;
       padding: 0;
   }
-    .slick-slide {
-      margin: 0 20px;
-      height: 390px;
-      width: auto;
+  .slick-slide {
+    margin: 0 20px;
+    height: 390px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &:hover {
+    .slick-arrow {
+      opacity: .5;
+    }
+  }
+  .slick-arrow {
+      position: absolute;
+      top: 50%;
+      width: 52px;
+      height: 52px;
+      margin-top: -26px;
+      background-color: transparent;
+      padding: 0;
+      font-size: 0;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity .3s linear;
+      overflow: hidden;
+      &.slick-prev {
+          left: 0; 
+          &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 23px;
+              height: 23px;
+              margin-left: -4px;
+              margin-top: -8px;
+              border-top: solid 4px rgb(187, 218, 218);
+              border-left: solid 4px rgb(187, 218, 218); 
+              transform: rotate(-45deg);
+          }
+      }
+      &.slick-next {
+          right: 0; 
+          &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 23px;
+              height: 23px;
+              margin-left: -9px;
+              margin-top: -8px;
+              border-right: solid 4px rgb(187, 218, 218);
+              border-bottom: solid 4px rgb(187, 218, 218);
+              transform: rotate(-45deg);
+          }
+      }
+      &:hover {
+          opacity: 1;
+      }
+  }
+  .gallery-slider {
       display: flex;
       justify-content: center;
       align-items: center;
-      div {
+      position: relative;
+      padding: 0;
+      li {
+        min-width: 0;
         padding: 0;
-        margin: 0;
-      }
-    }
-    &:hover {
-      .slick-arrow {
-        opacity: .5;
-      }
-    }
-    .slick-arrow {
-        position: absolute;
-        top: 50%;
-        width: 52px;
-        height: 52px;
-        margin-top: -26px;
-        background-color: transparent;
-        padding: 0;
-        font-size: 0;
-        z-index: 1;
-        opacity: 0;
-        transition: opacity .3s linear;
-        overflow: hidden;
-        &.slick-prev {
-            left: 0; 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 23px;
-                height: 23px;
-                margin-left: -4px;
-                margin-top: -8px;
-                border-top: solid 4px rgb(187, 218, 218);
-                border-left: solid 4px rgb(187, 218, 218); 
-                transform: rotate(-45deg);
-            }
-        }
-        &.slick-next {
-            right: 0; 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 23px;
-                height: 23px;
-                margin-left: -9px;
-                margin-top: -8px;
-                border-right: solid 4px rgb(187, 218, 218);
-                border-bottom: solid 4px rgb(187, 218, 218);
-                transform: rotate(-45deg);
-            }
-        }
+        box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.2);
+        transition: box-shadow .3s linear;
         &:hover {
-            opacity: 1;
+          box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.3);
         }
+        a {
+            img {
+              height: 390px;
+              width: auto;
+            }
+        }
+      }
+  }
+  @media (max-width: 1600px) {
+    min-height: 620px;
+    padding: 200px 0 50px 0;
+    .slick-slide {
+      height: 300px;
     }
     .gallery-slider {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        padding: 0;
-        li {
-          min-width: 0;
-          padding: 0;
-          box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.2);
-          transition: box-shadow .3s linear;
-          &:hover {
-            box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.3);
-          }
-          a {
-              img {
-                height: 390px;
-                width: auto;
-              }
+      li {
+        a {
+          img {
+            height: 300px;
+            width: auto;
           }
         }
+      }
     }
+  }
 }
 
 .mfp-gallery {
-    .mfp-container {
-        max-width: 600px;
-        height: auto;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        padding: 0 50px;
-    }
-    .mfp-content {
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        padding: 0;
-        z-index: 0;
-        img {
-            width: 100%;
-            height: auto;
-            padding: 0;
-        }
-    }
+  .mfp-container {
+      max-width: 600px;
+      height: auto;
+      max-height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 50px;
+  }
 }
 
 .mfp-bg {
@@ -179,7 +186,8 @@
   vertical-align: middle;
   margin: 0 auto;
   text-align: left;
-  z-index: 1045;}
+  z-index: 1045;
+}
 
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
@@ -246,25 +254,25 @@
 
 
 .mfp-iframe-scaler iframe {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    background: #000;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background: #000;
 }
 
 img.mfp-img {
   width: auto;
   max-width: 100%;
   height: auto;
-  max-height: 100% !important;
+  max-height: 90vh !important;
   display: block;
   line-height: 0;
   box-sizing: border-box;
-  padding: 40px 0 40px;
+  padding: 0;
   margin: 0 auto;
 }
 

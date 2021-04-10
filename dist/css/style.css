@@ -1037,9 +1037,6 @@ button * {
   position: fixed;
   left: -5px;
   top: 0;
-  -webkit-box-shadow: 3px 2px 15px 0px rgba(207, 187, 184, 0.2);
-          box-shadow: 3px 2px 15px 0px rgba(207, 187, 184, 0.2);
-  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1053,7 +1050,10 @@ button * {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-shadow: 3px 2px 15px 0px rgba(207, 187, 184, 0.2);
+          box-shadow: 3px 2px 15px 0px rgba(207, 187, 184, 0.2);
   overflow: auto;
+  z-index: 10;
 }
 
 .menu {
@@ -1063,19 +1063,7 @@ button * {
 }
 
 .menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  display: block;
 }
 
 .menu__li {
@@ -1200,5 +1188,13 @@ button * {
 @media (max-width: 1900px) {
   .sidebar {
     width: auto;
+  }
+}
+
+@media (max-height: 400px) {
+  .sidebar {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }

@@ -17,7 +17,7 @@ var sliderCall = {
             slidesToScroll: 1,
             draggable: true,
             variableWidth: true,
-            responsive: [
+           /* responsive: [
                 {
                     breakpoint: 768,
                     settings: {
@@ -32,7 +32,7 @@ var sliderCall = {
                         centerPadding: '15px'
                     }
                 }
-            ]
+            ]*/
         });
     }
 }

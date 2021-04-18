@@ -14,6 +14,7 @@ var sliderCall = {
             autoplay: true,
             autoplaySpeed: 3000,
             pauseOnHover: false,
+            pauseOnFocus: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             draggable: true,

@@ -33,7 +33,6 @@ function lightboxTrigger() {
         fixedContentPos: true,
         closeOnBgClick: true,
         alignTop: false,
-		//tLoading: 'Loading image #%curr%...',
 		mainClass: 'mfp-img-mobile',
 		gallery: {
 			enabled: true,

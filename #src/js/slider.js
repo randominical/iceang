@@ -13,26 +13,11 @@ var sliderCall = {
             infinite: true,
             autoplay: true,
             autoplaySpeed: 3000,
+            pauseOnHover: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             draggable: true,
             variableWidth: true,
-           /* responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: true,
-                        centerPadding: '15px'
-                    }
-                }
-            ]*/
         });
     }
 }

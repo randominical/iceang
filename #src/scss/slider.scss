@@ -6,37 +6,7 @@
     align-items: center;
     margin: 0;
     position: relative;
-    .slick-track {
-      display: flex;
-      align-items: center;
-      padding: 15px 0;
-      overflow: visible;
-    }
-    .slick-list {
-      position: relative;
-      overflow: hidden;
-      display: block;
-      margin: 0;
-      padding: 0;
-  }
-  .slick-slide {
-    margin: 0 20px;
-    height: 390px;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
-      padding: 0;
-      margin: 0;
-    }
-  }
-  &:hover {
     .slick-arrow {
-      opacity: .5;
-    }
-  }
-  .slick-arrow {
       position: absolute;
       top: 50%;
       width: 52px;
@@ -85,12 +55,42 @@
           opacity: 1;
       }
   }
+  .slick-track {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    overflow: visible;
+  }
+  .slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .slick-slide {
+    margin: 0 20px;
+    height: 390px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      padding: 0;
+      margin: 0;
+    }
+  }
   .gallery-slider {
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       padding: 0;
+      &:hover {
+        .slick-arrow {
+          opacity: .5 !important;
+        }
+      }
       li {
         min-width: 0;
         padding: 0;

@@ -1,7 +1,7 @@
 .gallery {
     height: 100vh;
     min-height: 920px;
-    padding: 250px 0 50px 0;
+    padding: 30px 0 50px 0;
     display: flex;
     align-items: center;
     margin: 0;
@@ -109,7 +109,7 @@
   }
   @media (max-width: 1600px) {
     min-height: 620px;
-    padding: 200px 0 50px 0;
+    padding: 30px 0 50px 0;
     .slick-slide {
       height: 300px;
     }

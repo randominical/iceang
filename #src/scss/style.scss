@@ -28,6 +28,13 @@ a, button, a *, button * {
     position: relative;
 }
 
+.section-top {
+    padding-top: 250px !important;
+    @media (max-width: 1600px) {
+        padding-top: 200px !important;
+    }
+}
+
 .container {
     width: 100%;
     max-width: 1540px;
@@ -65,6 +72,7 @@ a, button, a *, button * {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         margin: 0;
         padding: 0;
         @media (hover: none), (pointer: coarse) {
@@ -253,7 +261,7 @@ a, button, a *, button * {
 }
 
 .pics-gallery {
-    padding: 300px 0 50px 0;
+    padding: 30px 0 50px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -296,7 +304,7 @@ a, button, a *, button * {
         }
     }
     @media (max-width: 1600px) {
-        padding: 250px 0 50px 0;
+        padding: 30px 0 50px 0;
     }
     @media (max-width: 1099px) {
         li {

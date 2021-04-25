@@ -29,9 +29,9 @@ a, button, a *, button * {
 }
 
 .section-top {
-    padding-top: 250px !important;
+    padding-top: 290px !important;
     @media (max-width: 1600px) {
-        padding-top: 200px !important;
+        padding-top: 230px !important;
     }
 }
 
@@ -85,6 +85,9 @@ a, button, a *, button * {
             left: 50%;
             background: rgba(255, 255, 255, 0.8);
             color: rgba(70, 70, 70, 0.9);
+        }
+        @media (max-width: 1200px) {
+            font-size: 20px;
         }
     }
 }
@@ -186,17 +189,28 @@ a, button, a *, button * {
 }
 
 .parts {
-    padding: 70px 0 30px 0;
+    padding: 30px 0 50px 0;
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+    }
+    &__item {
+        width: 33.333%;
+        margin: 0 0 5% 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__title {
         transition: opacity .3s linear;
         opacity: 0;
         z-index: -2;
     }
     &__link {
-        display: block;
-        width: 100%;
-        padding: 100% 0 0 0;
-        margin: 0 30% 30% 0;
+        width: 85%;
+        padding-top: 80%;
         position: relative;
         overflow: hidden;
         img {
@@ -204,14 +218,12 @@ a, button, a *, button * {
             top: 50%;
             left: 50%;
             width: 100%;
-            height: 100%;
+            height: auto;
             transform: translate(-50%, -50%);
-            z-index: 1;
         }
         &:hover {
             img {
-                width: 105%;
-                height: 105%;
+                width: 110%;
             }
             .parts__title {
                 opacity: 1;
@@ -219,22 +231,28 @@ a, button, a *, button * {
             }
         }
     }
-    &__row {
-        justify-content: space-between;
-    }
-    &__column {
-        flex: 1 0 200px;
-    }
     @media (hover: none), (pointer: coarse) {
         &__title {
             opacity: 1;
             z-index: 2;
         }
     }
+    @media (max-width: 1000px) {
+        &__item {
+            width: 50%;
+            margin: 0 0 7% 0;
+        }
+    }
+    @media (max-width: 450px) {
+        &__item {
+            width: 100%;
+            margin: 0 0 10% 0;
+        }
+    }
 }
 
 .about {
-    padding: 250px 0 50px 0;
+    padding: 30px 0 50px 0;
     min-height: 80vh;
     display: flex;
     align-items: center;

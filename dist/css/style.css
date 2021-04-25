@@ -868,7 +868,7 @@ button * {
 }
 
 .section-top {
-  padding-top: 250px !important;
+  padding-top: 290px !important;
 }
 
 .container {
@@ -1021,7 +1021,35 @@ button * {
 }
 
 .parts {
-  padding: 70px 0 30px 0;
+  padding: 30px 0 50px 0;
+}
+
+.parts__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parts__item {
+  width: 33.333%;
+  margin: 0 0 5% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .parts__title {
@@ -1033,10 +1061,8 @@ button * {
 }
 
 .parts__link {
-  display: block;
-  width: 100%;
-  padding: 100% 0 0 0;
-  margin: 0 30% 30% 0;
+  width: 85%;
+  padding-top: 80%;
   position: relative;
   overflow: hidden;
 }
@@ -1046,16 +1072,14 @@ button * {
   top: 50%;
   left: 50%;
   width: 100%;
-  height: 100%;
+  height: auto;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 1;
 }
 
 .parts__link:hover img {
-  width: 105%;
-  height: 105%;
+  width: 110%;
 }
 
 .parts__link:hover .parts__title {
@@ -1063,20 +1087,8 @@ button * {
   z-index: 2;
 }
 
-.parts__row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.parts__column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 200px;
-          flex: 1 0 200px;
-}
-
 .about {
-  padding: 250px 0 50px 0;
+  padding: 30px 0 50px 0;
   min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1261,7 +1273,7 @@ button * {
   }
 
   .section-top {
-    padding-top: 200px !important;
+    padding-top: 230px !important;
   }
 
   .logo {
@@ -1279,6 +1291,12 @@ button * {
   }
 }
 
+@media (max-width: 1200px) {
+  .title_chapter {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 1099px) {
   .pics-gallery li {
     width: 33.33%;
@@ -1292,6 +1310,11 @@ button * {
 
   .sidebar {
     padding: 30px 15px 30px 25px;
+  }
+
+  .parts__item {
+    width: 50%;
+    margin: 0 0 7% 0;
   }
 }
 
@@ -1332,6 +1355,11 @@ button * {
 
   .sidebar {
     display: none;
+  }
+
+  .parts__item {
+    width: 100%;
+    margin: 0 0 10% 0;
   }
 }
 

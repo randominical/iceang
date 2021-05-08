@@ -310,7 +310,7 @@ a, button, a *, button * {
             }
         }
     }
-    @media (hover: none), (pointer: coarse) {
+    @media (hover: hover), (pointer: fine) {
         li {
             a {
                 &:hover {
@@ -334,10 +334,6 @@ a, button, a *, button * {
             width: 50%;
             a {
                 width: 90%;
-                img {
-                    
-                    
-                }
             }
         }
     }
@@ -368,25 +364,40 @@ a, button, a *, button * {
     display: flex;
     align-items: center;
     &__icon {
-        margin: 3px 0 3px 0;
+        width: 60px;
+        margin: 0 20px 0 0;
     }
     &__link {
-        font-size: 14px;
-        color: grey;
+        width: 100%;
         padding: 5px;
-        margin: 1px 0;
-        &:visited {
-            color: grey;
+        margin: 0;
+        overflow: hidden;
+        outline: none;
+        img {
+            width: 100%;
+            height: auto;
         }
-        &:hover, &:active {
-            color: purple;
+    }
+    @media (hover: hover), (pointer: fine) {
+        &__link {
+            &:hover, &:active {
+                img {
+                    transform: rotate(10deg) scale(1.1);
+                }
+            }
         }
     }
     @media (max-width: 720px) {
         margin: 0 0 20px 0;
+        &__icon {
+            width: 40px;
+        }
     }
     @media (max-width: 420px) {
-        flex-direction: column;
+        &__icon {
+            width: 35px;
+            margin: 0 10px 0 0;
+        }
     }
 }
 

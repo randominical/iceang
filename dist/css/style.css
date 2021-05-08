@@ -1204,23 +1204,21 @@ button * {
 }
 
 .iconbar__icon {
-  margin: 3px 0 3px 0;
+  width: 60px;
+  margin: 0 20px 0 0;
 }
 
 .iconbar__link {
-  font-size: 14px;
-  color: grey;
+  width: 100%;
   padding: 5px;
-  margin: 1px 0;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
 }
 
-.iconbar__link:visited {
-  color: grey;
-}
-
-.iconbar__link:hover,
-.iconbar__link:active {
-  color: purple;
+.iconbar__link img {
+  width: 100%;
+  height: auto;
 }
 
 .copyrights__artist {
@@ -1336,6 +1334,10 @@ button * {
   .iconbar {
     margin: 0 0 20px 0;
   }
+
+  .iconbar__icon {
+    width: 40px;
+  }
 }
 
 @media (max-width: 705px) {
@@ -1364,11 +1366,9 @@ button * {
 }
 
 @media (max-width: 420px) {
-  .iconbar {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .iconbar__icon {
+    width: 35px;
+    margin: 0 10px 0 0;
   }
 
   .copyrights__artist {
@@ -1413,10 +1413,6 @@ button * {
     opacity: 1;
     z-index: 2;
   }
-
-  .pics-gallery li a:hover img {
-    width: 110%;
-  }
 }
 
 @media (max-height: 400px) {
@@ -1424,5 +1420,18 @@ button * {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media (hover: hover), (pointer: fine) {
+  .pics-gallery li a:hover img {
+    width: 110%;
+  }
+
+  .iconbar__link:hover img,
+  .iconbar__link:active img {
+    -webkit-transform: rotate(10deg) scale(1.1);
+        -ms-transform: rotate(10deg) scale(1.1);
+            transform: rotate(10deg) scale(1.1);
   }
 }

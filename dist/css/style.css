@@ -1087,6 +1087,15 @@ button * {
   z-index: 2;
 }
 
+.comics__link:first-child {
+  background: url("../img/comics/comics-menu/delakur-v1.jpg") 0 0/cover no-repeat;
+}
+
+.comics__link:hover .parts__title {
+  opacity: 0;
+  z-index: -1;
+}
+
 .about {
   padding: 30px 0 50px 0;
   min-height: 80vh;
